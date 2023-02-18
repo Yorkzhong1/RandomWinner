@@ -154,7 +154,9 @@ export default function Home() {
       const _gameStarted = await randomGameNFTContract.gameStarted();
 
       const _gameArray = await subgraphQuery(FETCH_CREATED_GAME());
+      
       const _game = _gameArray.games[0];
+      
       let _logs = [];
       // Initialize the logs array and query the graph for current gameID
       if (_gameStarted) {
@@ -334,7 +336,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className={styles.footer}>Made with &#10084; by Your Name</footer>
+      <footer className={styles.footer}>Made with &#10084; by Lanli</footer>
     </div>
   );
 }
